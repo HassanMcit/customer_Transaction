@@ -14,6 +14,12 @@ const cartDiv = document.getElementById('chart');
 let searchInput, amountInput, matched;
 let dataReceived;
 
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('load');
+  document.getElementById('content').classList.remove('d-none');
+  document.getElementById('load').classList.add('d-none');
+})
+
 let myChart, chartInfo = {
   type: 'bar',
   data: {

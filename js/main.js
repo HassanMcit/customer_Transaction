@@ -69,7 +69,6 @@ function diplayData(data) {
   if (data.length) {
     chartIcon.classList.remove('d-none');
     showChart.classList.remove('d-none');
-    chart.classList.remove('d-none');
     error.classList.add('d-none');
     if (myChart) {
       myChart.destroy();

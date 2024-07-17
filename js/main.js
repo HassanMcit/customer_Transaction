@@ -42,6 +42,7 @@ let myChart, chartInfo = {
   }
 };
 
+document.getElementById('chart').classList.add('d-none');
 
 async function getData() {
   const response = await fetch('data.json');
@@ -69,7 +70,7 @@ function diplayData(data) {
   if (data.length) {
     chartIcon.classList.remove('d-none');
     showChart.classList.remove('d-none');
-    chart.classList.add('d-none');
+    document.getElementById('chart').classList.add('d-none');
     error.classList.add('d-none');
     if (myChart) {
       myChart.destroy();
@@ -123,7 +124,7 @@ function diplayData(data) {
     error.classList.remove('d-none');
     chartIcon.classList.add('d-none');
     showChart.classList.add('d-none');
-    chart.classList.add('d-none');
+    document.getElementById('chart').classList.add('d-none');
   }
 }
 
